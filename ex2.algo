@@ -1,0 +1,16 @@
+ALGORITHM algoroverlapping_elements
+VAR
+    set1,set2,set: ARRAY_OF INTEGER[];
+    i,j:INTEGER;
+    Common_elements:INTEGER:=0;
+BEGIN
+    set:concat(set1,set2)
+    FOR i FROM 0 TO set.length-1 DO
+        FOR j FROM 0 TO set.length-1 DO
+            IF (set[i]=set[j] and i<>j) THEN
+                Common_elements:= Common_elements+set[i]
+            END_IF
+        END_FOR
+    END_FOR
+    write('Sum of overlapping elements:',Common_elements)
+END
